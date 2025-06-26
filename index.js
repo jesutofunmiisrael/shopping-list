@@ -9,7 +9,7 @@ import {
     setDoc
 } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js"
-import { app } from "../firebaseconfig/firebaseconfig.js"
+import { app } from "./firebaseconfig/firebaseconfig.js"
 
 const auth = getAuth(app)
 const DB = getFirestore(app)
