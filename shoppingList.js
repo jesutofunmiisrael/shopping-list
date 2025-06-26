@@ -150,13 +150,13 @@ const getShoppingList = async () => {
             loaderEl.classList.add("d-none")
             shoppingListSnapShot.forEach(doc => {
                 const shoppingItem = doc.data()
+                // give a class "edit-btn" to each buttons and add an attribute "itemId" to them ( this will be used from line 167 - 174)
                 shoppingListEl.innerHTML += `
                     <div class="shopping-item ${shoppingItem.status === "completed" && "completed"}">
                     <div>
                         <input type="checkbox">
                     <span>${shoppingItem.itemName}</span>
                     </div>
-                    // give a class "edit-btn" to each buttons and add an attribute "itemId" to them ( this will be used from line 167 - 174)
                     <button type="button" itemId="${doc.id}" id="edit-btn-${doc.id}"  class="btn btn-primary edit-btn" data-bs-toggle="modal" data-bs-target="#editModal">
                          Edit
                     </button>
