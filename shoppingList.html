@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping list</title>
+    <link rel="stylesheet" href="./global.css">
+    <link rel="stylesheet" href="./shoppingList.css">
+    <link rel="stylesheet" href="./additem.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Button trigger modal -->
+    
+    <!-- Modal: This modal is called when you want to edit a shopping item -->
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="itemTitle">-----</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="edit-item-form">
+                        <div>
+                            <label for="itemName">Item name</label>
+                            <input type="text" id="itemName" placeholder="-">
+                        </div>
+                        <div>
+                            <label for="quantity">Quantity</label>
+                            <input type="number" id="quantity" placeholder="-">
+                        </div>
+                        <div>
+                            <label for="unit">Unit</label>
+                            <input type="text" id="unit" placeholder="-">
+                        </div>
+                        <div>
+                            <label for="price">Price</label>
+                            <input type="number" id="price" placeholder="$">
+                        </div>
+
+                        <div>
+                            <select name="status" id="status">
+                                <option value="pending">Pending</option>
+                                <option value="completed">Completed</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="description">Description</label>
+                            <textarea 
+                            cols="30" rows="5" name="description" id="description" placeholder="Enter a description..."></textarea>
+                        </div>
+
+                        <!-- <button id="edit-item-btn">Save</button> -->
+                    </form>
+                </div>
+
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="edit-item-btn" data-bs-dismiss="modal">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTAINER -->
+    <div class="container">
+        <header>
+            <img id="back-btn" alt="Back button" src="./images/arrow-left.png" />
+            <img src="https://avatar.iran.liara.run/public/girl" alt="" id="user-image">
+            <div>menu</div>
+        </header>
+
+        <h3 class="page-title">Grocery Shopping List</h3>
+
+        <!-- overview -->
+        <div class="overview">
+            <div>
+                <img src="./images/harmbugger.png" alt="">
+                <span>List 1/7 Completed</span>
+            </div>
+            <div>
+                <img src="./images/tag.png" alt="harmbugger icon">
+                <span>Kitchen items</span>
+            </div>
+        </div>
+
+        <!-- shopping list -->
+        <div class="shopping-list">
+            <!-- shopping item -->
+            <div class="spinner-border m-auto mt-5 d-none" id="loader" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+
+
+        </div>
+        <!-- add new item button -->
+        <a id="add-item-btn" href="./additem.html">
+            <img src="./images/plus.png" alt="">
+            <span>Add new item</span>
+        </a>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+<script src="./shoppingList.js" type="module"></script>
+
+</html>

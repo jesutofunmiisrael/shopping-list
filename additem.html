@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Item</title>
+    <link rel="stylesheet" href="./additem.css">
+    <link rel="stylesheet" href="./global.css">
+</head>
+<body>
+    <div class="container">
+        
+        <form id="new-item-form">
+            <h3>Add New Item</h3>
+            <div>
+                <label for="itemName">Item name</label>
+                <input type="text" id="itemName" placeholder="-">
+            </div>
+            <div>
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" placeholder="-">
+            </div>
+            <div>
+                <label for="unit">Unit</label>
+                <input type="text" id="unit" placeholder="-">
+            </div>
+            <div>
+                <label for="price">Price</label>
+                <input type="number" id="price" placeholder="$">
+            </div>
+            <div>
+                <label for="description">Description</label>
+                <textarea 
+                cols="30" rows="5" name="description" id="description" placeholder="Enter a description..."></textarea>
+            </div>
+
+            <button id="add-item-btn">Save</button>
+        </form>
+    </div>
+
+    <script type="module" src="./additem.js"></script>
+</body>
+</html>

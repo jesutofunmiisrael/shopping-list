@@ -1,0 +1,124 @@
+.container{
+    max-width: 450px !important; 
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 1rem;
+
+    #back-btn{
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+    #user-image{
+        border: 2px solid #7F56D9;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: white;
+    }
+}
+
+.page-title{
+    color: #344054;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.overview{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.overview > div{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: #344054;
+    font-size: small;
+    
+    img{
+        width: 1.2rem;
+    }
+}
+
+.shopping-list{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 3rem;
+    max-height: 60vh;
+    overflow-y: scroll;
+
+    .shopping-item{
+        border: 1px #999 solid;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+.shopping-item.completed{
+    background-color: #F9F5FF;
+    border: 1px solid #7F56D9;
+    color: #7F56D9;
+
+    input[type="checkbox"]{
+        border: 3px solid red;
+        width: 20px;
+    }
+
+    span{
+        text-decoration: line-through;
+    }
+}
+
+#add-item-btn{
+    display: block;
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #7F56D9;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: background ease 200ms;
+    cursor: pointer;
+    position: fixed;
+    bottom: 1rem;
+    max-width: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+
+    img{
+        width: 16px;
+    }
+}
+
+#add-item-btn:hover{
+    background-color: #6035bc;
+}
+
+.empty{
+    background-color: #eee;
+    padding: 40px;
+    margin-top: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

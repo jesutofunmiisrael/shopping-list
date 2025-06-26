@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+
+    <style>
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            width: 95vw;
+            max-width: 500px;
+            margin: auto;
+            border: 1px solid;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        #signup-btn:disabled{
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <form id="signup-form">
+        <div>
+        
+            <label for="email">Email</label>
+            <input type="email" name="email" id="signup-email" placeholder="elon@gmail.com">
+        </div>
+        <div>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="signup-username" placeholder="elon">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="signup-password" placeholder="*********">
+        </div>
+        <button type="submit"  id="signup-btn">Sign up</button>
+
+        <p style="color: red;" id="error-message"></p>
+    </form>
+
+    <script type="module" src="./index.js"></script>
+</body>
+</html>

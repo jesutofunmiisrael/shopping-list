@@ -1,0 +1,55 @@
+
+
+header{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: white;
+    border-bottom: 1px #bbb solid;
+
+    .profile-image{
+        height: 30px;
+        width: 30px;
+        border: 1px solid;
+        border-radius: 50%;
+    }
+}
+
+.cta{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+
+    align-items: center;
+    h3{
+        color: #101828;
+    }
+    span{
+        color: #667085;
+    }
+
+}
+
+.add-item-icon{
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: 100 !important;
+    color: #7F56D9;
+}
