@@ -64,7 +64,7 @@ const handleSignup = async () => {
         const docRef = doc(userColRef, user.uid)
         const userSnapshot = await setDoc(docRef, newUser)
        
-        window.location.href = "../profile.html"
+        window.location.href = "./profile.html"
 
     } catch (error) {
         console.log(error)
